@@ -64,7 +64,7 @@ function break_function() {
     document.getElementById("breakdemo").innerHTML = text;
 }
 
-function continue_function() {
+function continue_function() { //define the function name
     var text = ""
     var i;
     for (i=0; i<5; i++) {
