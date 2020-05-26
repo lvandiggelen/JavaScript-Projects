@@ -25,7 +25,7 @@ function getReceipt () {
     console.log("size text1:"+text1);
     console.log("subtotal: $" +runningTotal+".00");
     getTopping(runningTotal,text1);
-    getVegetable(runningTotal,text1)
+    getReceipt(runningTotal,text1);
 };
 
 function getTopping(runningTotal,text1) {
