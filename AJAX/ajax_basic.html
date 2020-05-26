@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -29,4 +30,37 @@ function getContent() {
 }
 		</script>
     </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Basic AJAX Demo</title>
+		<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+			<h2>Get The Latest Content:</h2>
+			<div class='content' id="content">
+				<input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent();"/>
+			</div>
+		<script type="text/javascript">
+			  
+              var ajax = new XMLHttpRequest() ;
+
+ajax.open('GET', 'content.html');
+
+ajax.onreadystatechange = function() {
+    if(ajax.readyState == 4) {
+        document.getElementById('content').innerHTML = ajax.responseText;
+    }
+}
+
+function getContent() {
+    ajax.send();
+    document.getElementById('btn_content').style.display = 'none';
+}
+		</script>
+    </body>
+>>>>>>> 49993b6289b7310518433121fc34c23e4051d310
 </html>
