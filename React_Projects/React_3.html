@@ -2,13 +2,19 @@
 <html>
     <head>
         <link rel="stylesheet" href="./css/React_3.css">
-       <!-- <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+       <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script> -->
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script> 
 
     </head>
     <body>
-       <!--   <h2>Popup Form</h2>
+        <script>document.body.className += ' fade-out';
+        $(function() {
+            $('body').removeClass('fade-out');
+        });
+    </script>
+
+    <h2>Popup Form</h2>
 <p>Click on the button at the bottom of this page to open the login form.</p>
 <p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
 
@@ -28,19 +34,19 @@
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
 </div>
-       <script>document.body.className += ' fade-out';</script>
-       <script> $(function() {
-            $('body').removeClass('fade-out');
-        });
-        </script>
+
+    
+
+
         <h1 style="font-size: 10vw;">This is the largest</h1>
         <p style="font-size: 5vw;">Medium size with a lotta words</p>
         <p>This is regular size font with no font sizing changes.</p>
         <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post"> 
             <label for="phone_number">Phone Number:</label><br>
             <input type="text" id="pnumber" name="pnumber" value=""><br>
-            <input type="submit" value="Submit"> -->
-       <!-- <div id='JSX'></div>
+            <input type="submit" value="Submit">
+
+         <div id='JSX'></div>
         <script type="text/babel">
             class Greeting extends React.Component {
                 render() {
@@ -48,7 +54,7 @@
                 }
             }
             ReactDOM.render(<Greeting />, document.getElementById('JSX'))
-         </script>-->
+         </script>
 
         <h1>The @keyframes Rule</h1>
 
