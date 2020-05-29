@@ -2,13 +2,43 @@
 <html>
     <head>
         <link rel="stylesheet" href="./css/React_3.css">
-       <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+            crossorigin="anonymous">
+        </script>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
         <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script> 
 
     </head>
     <body>
-        <script>document.body.className += ' fade-out';
+
+        <h2>Sticky Element: Scroll Down to See the Effect</h2>
+<p> 
+
+
+  Scroll down this page to see how  sticky positioning works.</p>
+<div class="sticky">   <button class="open-button" onclick="openForm()">Open Form</button>
+
+  <div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>Login</h1>
+  
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <button type="submit" class="btn">Login</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+    
+  I will stick to the screen when you reach my scroll position</div>
+
+
+<script>document.body.className += ' fade-out';
         $(function() {
             $('body').removeClass('fade-out');
         });
@@ -17,24 +47,8 @@
     <h2>Popup Form</h2>
 <p>Click on the button at the bottom of this page to open the login form.</p>
 <p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
-
-<button class="open-button" onclick="openForm()">Open Form</button>
-
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Login</h1>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
 </div>
-
+-->
     
 
 

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lewis van Diggelen Porfolio</title>
+            <link rel="stylesheet" type="text/css" href="Stylesheet/Portfolio.css">
+            <script src="JS/Portfolio.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+
+    <body class="Background"> 
+        <script>
+            document.body.className += 'fade-out';
+                $(function(){
+                    $('body').removeClass('fade-out');
+                }
+            );
+        </script>
+    <!-- Navbar -->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">#Slideshow</a>
+            <a href="#About">About</a>
+            <a href="#Github">Github</a>
+            <a onclick="openForm()">Contact</a>
+        </div>
+
+<div class="btn cancel" onclick="closeForm()">
+            
+    <div id="Home">
+        <br>
+        <br>
+
+        <video autoplay muted loop id="Typing_Video" >
+            <source src="Stylesheet/Video/Typing.mp4" type="video/mp4">
+            Your browser does not support HTML5 video. 
+        </video>
+    </div>
+
+    <!-- Video Text -->
+    <div class="Video_Text">
+        <h1 style="color: white;">Lewis van Diggelen's Porfolio</h1>
+            <p>
+                <strong>
+                    <center>
+                        <q>
+                            Long-Term, we must begin to build our internal strengths.
+                            <br> It isn't just skills like computer technology. 
+                            <br> It's the old-fashioned basics 
+                            <br> of self-reliance,
+                            <br> self-motivation,
+                            <br> self-reinforcement,
+                            <br> self-discipline,
+                            <br> self-command.
+                        </q>
+                        <br>-Steven Pressfield <br>
+                        <br>
+                        My name is Lewis van Diggelen. Welcome to my portfolio website. On it, I will tell you about my background and experience. <br>
+                        <br> Thank you for stopping by and enjoy!
+                    </center>
+                </strong>
+            </p>
+    </div>
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                
+                <div class="mySlides fade">
+                    <div class="Slide_Number">1 / 6</div>
+                        <img class="Slide_Show_Images" src="Stylesheet/Images/me.jpg" style="width: 100%;">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                    <div class="Slide_Number">2 / 6</div>
+                        <img class="Slide_Show_Images" src="Stylesheet/Images/HTML_CSS_and_JavaScript.jpeg"  style="width: 100%;">
+                        <div class="text">I'm a full-stack software developer, <br> trained in: <br> HTML, CSS, JavaScript</div>
+                    </div>
+                    
+                <div class="mySlides fade">
+                    <div class="Slide_Number">3 / 6</div>
+                        <img class="Slide_Show_Images" src="Stylesheet/Images/Python.png"  style="width: 100%;">
+                        <div class="text">the popular programming language Python,</div>
+                    </div>
+
+                <div class="mySlides fade">
+                    <div class="Slide_Number">4 / 6</div>
+                        <img class="Slide_Show_Images" src="Stylesheet/Images/C_Sharp_and_Dot_NET.png"  style="width: 100%;">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+                    </div>
+
+                <div class="mySlides fade">
+                    <div class="Slide_Number">5 / 6</div>
+                        <img class="Slide_Show_Images" src="Stylesheet/Images/SQL_and_Databases.jpg" style="width: 100%;" >
+                        <div class="text">back end development, databases, and SQL.</div>
+                    </div>
+                        
+                <div class="mySlides fade">
+                    <div class="Slide_Number">6 / 6</div>
+                        <img class="Slide_Show_Images" src="Stylesheet/Images/Coding_1.jpg"  style="width: 100%;">
+                        <div class="text">
+                            <a onclick="openForm()" href="#Contact" style="color: white;">Contact me now!</a>
+                        </div>
+                    </div>
+
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+        <br>
+            <div style="text-align: center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+
+            </div>
+        </div>
+    </div>
+<script>
+    var slideIndex = 1;
+        showslides(slideIndex)
+    function plusSlides(n) {
+        showslides(slideIndex += n);
+    }
+    function currentSlide(n) {
+        showslides(slideIndex = n);
+    }
+    function showslides(n) {
+        var i; 
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+                for (i = 0, i < slides.length; i++) {
+                slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
+<!-- About  section-->
+
+    <div class="Row" id="About">
+        <div class="Column_2">
+            <img src="Stylesheet/Images/Development.jpg" alt="Laptop">
+        </div>
+
+        <div class="Column_1">
+            <h1>About</h2>
+                <p>I am a software developer who loves to network! As a software developer and part-time DJ, I enjoy time behind the computer in various settings. <br><br>
+                I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a> 
+                Software Developer Boot Camp, and trained and experienced the following web and programming languages: HTML, CSS, JavaScript, SQL, C#, with a focus on Python. <br><br>
+                I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below! </p>
+        </div>
+    </div>
+
+<!--Github Sxn-->
+    <div class="Row" id="GitHub">
+        <div class="Column_1">
+            <h1>GitHub</h1>
+                <p>You can view my coding projects on my GitHub profile here: <br>
+                <center><a href="https://github.com/lvandiggelen">Lewis van Diggelen GitHub</a></center></p>
+        </div>
+
+        <div class="Column_2">
+            <a href="https://github.com/lvandiggelen" target="_blank"><img src="Stylesheet/Images/GitHub.png" alt="GitHub"></a>
+        </div>
+    </div>
+</div>
+
+<!--Contact Sxn-->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+                <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                        <input type="text" placeholder="Enter your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Type your email address here" name="email" required>     
+                    <label for="Message"><b>Message</b></label>
+                        <input type="text" placeholder="Type your message here" name="message">
+
+            <button type="submit" class="btn">SUBMIT</button>
+            <button type="button" class="btn cancel">CLOSE</button>
+                </form>
+            </div>
+        </div>
+
+<!-- Footer Sxn-->
+    <footer>
+        <p>
+            <center>$copy Prosper Consulting Inc., <a href="https://learncodinganywhere.com/">The Tech Academy</a></center><br>
+        </p>
+    </footer>
+
+</body>
+</html>
